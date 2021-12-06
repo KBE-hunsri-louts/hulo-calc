@@ -1,0 +1,12 @@
+[
+    {
+        "id": "DE_REGULAR",
+        "value": "0.19",
+        "description": "Regular German VAT."
+    },
+    {
+        "id": "DE_REDUCED",
+        "value": "0.07",
+        "description": "Reduced German VAT."
+    }
+]
