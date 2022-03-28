@@ -8,6 +8,7 @@ import org.json.simple.parser.ParseException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -84,7 +85,8 @@ public class Calculator {
 
                     for (String id : taxMap.keySet()) {
                         if (id.contains(taxInformation)) {
-                            return Double.parseDouble(String.format("%.2f", price + (price * taxMap.get(id))));
+                            // parseDouble expects a US localized String (dot instead of comma)
+                            return Double.parseDouble(String.format(Locale.US, "%.2f", price + (price * taxMap.get(id))));
                         }
                     }
 
