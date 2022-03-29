@@ -9,8 +9,7 @@ RUN apk add dumb-init
 RUN mkdir /app
 RUN addgroup --system javauser && adduser -S -s /bin/false -G javauser javauser
 COPY --from=build /project/target/kbe-calculator-0.0.1-SNAPSHOT.jar /app/java-application.jar
-ENV PORT=8080
-EXPOSE 8080
+COPY --from=build /project/src/main/resources/static/vats.json /app/vats.json
 WORKDIR /app
 RUN chown -R javauser:javauser /app
 USER javauser

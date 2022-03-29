@@ -1,0 +1,8 @@
+services:
+  hulo-calculator:
+    container_name: "hulo-calculator"
+    build: .
+    ports:
+      - "8100:8080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

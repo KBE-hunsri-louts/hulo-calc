@@ -33,7 +33,8 @@ public class Calculator {
      */
     private void getTaxesFromJSON() {
 
-        String fileName = "./src/main/resources/static/vats.json";
+        //String fileName = "./src/main/resources/static/vats.json";
+        String fileName = "vats.json";
         Object object = null;
 
         try {
